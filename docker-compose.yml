@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+
+  wrf-python:
+    container_name: "wrf-python"
+    build:
+      context: $PWD
+      dockerfile: ./wrf-python.Dockerfile
+    volumes:
+      - $PWD:/home/mnt
+    entrypoint: /bin/bash
+
+  ncdump-json:
+    container_name: "ncdump-json"
+    build:
+      context: $PWD
+      dockerfile: ./ncdump-json.Dockerfile
+    volumes:
+      - $PWD:/home/mnt
+
+  node:
+    container_name: "netcdf4"
+    build:
+      context: $PWD
+      dockerfile: ./netcdf4.Dockerfile
+    volumes:
+      - $PWD:/home/mnt
+    entrypoint: /bin/bash
+
