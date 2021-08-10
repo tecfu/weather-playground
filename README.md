@@ -51,6 +51,11 @@ docker-compose -f ./wrf-python/docker-compose.yml run --rm  netcdf4
 ```
 
 
+## Notes
+
+- https://www.pkrc.net/wrf-lambert.html
+
+
 ### License
 
 GPL 2.0
